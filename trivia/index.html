@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!!!</title>
+        <script>
+            // Adding code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function listen() {
+    let btnClasses = document.querySelectorAll('.Answer');
+    let submitBtn = document.querySelector('#submit');
+    let partOneSubmitted = false;
+    let partTwoSubmitted = false;
+
+    for (let btnClass of btnClasses) {
+        btnClass.addEventListener('click', event => selection(event));
+    }
+
+    function selection(event) {
+        if (partOneSubmitted == true) {
+            return;
+        }
+        const curbtnClass = event.target;
+        let H4heading = document.createElement('h4');
+
+        if (curbtnClass.classList.contains('Correct')) {
+            curbtnClass.style.background = 'green';
+            H4heading.textContent = 'Correct!';
+        }
+        else {
+            curbtnClass.style.background = 'red';
+            H4heading.textContent = 'Incorrect';
+        }
+
+        let divElement = curbtnClass.parentElement;
+        divElement.appendChild(H4heading);
+        partOneSubmitted = true;
+    }
+
+    submitBtn.addEventListener('click', submitResponse);
+
+    function submitResponse() {
+        let submission = document.querySelector('#response');
+        let answer = submission.value;
+        let h4heading = document.createElement('h4');
+        if(partTwoSubmitted == true) {
+            return;
+        }
+
+        if (answer == '8') {
+            submission.style.background = 'green';
+            h4heading.textContent = 'Correct!';
+        }
+        else {
+            submission.style.background = 'red';
+            h4heading.textContent = 'Incorrect';
+        }
+        let divElement = submission.parentElement;
+        divElement.appendChild(h4heading);
+        partTwoSubmitted = true;
+    }
+});
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!!!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+                <h3>What meat is considered to be the cleanest source of protein?</h3>
+                <button class="Answer Correct">Chicken</button>
+                <button class="Answer Incorrect">Steak</button>
+                <button class="Answer Incorrect">Pork</button>
+                <button class="Answer Incorrect">Ice Cream</button>
+                <!-- Added multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>How many Mr. Olympia titles did Ronnie Colemen win?</h3>
+                <input id="response" type="text" placeholder="type in a number here...">
+                <button id="submit">Submit</button>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>

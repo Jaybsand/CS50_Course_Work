@@ -1,0 +1,63 @@
+body {
+    color: whitesmoke;
+    font-size: 21px;
+    background-color: black;
+    background-image: url(blackli.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Times New Roman', Times, serif sans-serif;
+    }
+
+.box {
+    width: 390px;
+
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    border: gray groove;
+    padding: 100;
+    background-color: black;
+    }
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 0%;
+    padding-left: 25%;
+    padding-right: 8%;
+    }
+
+.logo {
+    color:whitesmoke;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    }
+
+span {
+    color:gold;
+
+    }
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+    }
+
+nav ul li a {
+    color:whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    }
+
+.gif img {
+    padding-left: 190px;
+    padding-top: 395px;
+}
+
+
+

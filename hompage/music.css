@@ -1,0 +1,58 @@
+body {
+    color: whitesmoke;
+    font-size: 21px;
+    background-color: black;
+    background-image: url(blackli.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Times New Roman', Times, serif sans-serif;
+    }
+
+.gif img {
+    padding-left: px;
+    padding-top: ;
+}
+
+.list {
+    align-items: center;
+    margin-left: ;
+    margin-right: ;
+    padding-left: 650px;
+    padding-right: 15px;
+    padding-top: 50px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 0%;
+    padding-left: 25%;
+    padding-right: 8%;
+    }
+
+.logo {
+    color:whitesmoke;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    }
+
+span {
+    color:gold;
+
+    }
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+    }
+
+nav ul li a {
+    color:whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    }
